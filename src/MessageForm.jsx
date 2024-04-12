@@ -21,7 +21,7 @@ export default function MessageForm() {
     // Function to handle the form submission
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
-        if (message != '') {
+        if (message !== '') {
             try {
                 console.log("Attempting to add document", { content: message, createdAt: serverTimestamp() });
                 setIsWaiting(true);
