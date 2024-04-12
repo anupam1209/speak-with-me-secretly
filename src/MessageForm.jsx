@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './MessageForm.css';
-import firebase from './firebase'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import db from "./firebase";
 
@@ -40,7 +39,7 @@ export default function MessageForm() {
     };
 
     const handleKeyDown = (event) => {
-        if (event.key == 'Enter' && !event.shiftKey) {
+        if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
             handleSubmit(event);
         }
